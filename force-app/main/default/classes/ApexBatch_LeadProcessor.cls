@@ -1,4 +1,4 @@
-global class LeadProcessor implements Database.Batchable<sObject> {
+public class LeadProcessor implements Database.Batchable<sObject> {
     
     global Database.QueryLocator start(Database.BatchableContext bc) {
        return Database.getQueryLocator(
