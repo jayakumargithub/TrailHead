@@ -12,12 +12,12 @@ public class LeadProcessorTest {
     }
     
     @isTest
-    static void Test(){
+    static void test(){
          Test.startTest();
         LeadProcessor lp = new LeadProcessor();
         Id batchId = Database.executeBatch(lp);
         Test.stopTest();
         // after the testing stops, assert records were updated properly
-        System.assertEquals(200, [select count() from Lead where LeadSource = 'Dreamforce']);
+        System.assertEquals(200, [select count() from Lead where LeadSource = 'Dreamforce'],'Count didn\'t match');
     }
 }
